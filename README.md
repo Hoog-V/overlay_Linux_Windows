@@ -3,8 +3,8 @@ A package that creates and manipulates screen overlays based on tkinter.
 
 ## Platforms
 - Mac OS (tested and works)
-- Linux (not tested)
-- Windows (tested and does not work)
+- Linux (tested and works)
+- Windows (tested and works)
 
 ## Installation
 ```sh
