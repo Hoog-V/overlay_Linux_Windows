@@ -8,7 +8,7 @@ __all__ = [
 ]
 
 import tkinter as tk
-
+from sys import platform
 overlays = []
 
 master = tk.Tk()
@@ -59,9 +59,10 @@ class Window:
 		'''Make the overlay float on top of everything.'''
 		self._root.wm_attributes('-topmost', True)
 
-		'''Remove the overlay's shadow.'''
-		self._root.wm_attributes('-transparent', True)
-
+		if platform == "darwin":
+			'''Remove the overlay's shadow. Its a mac-os thingy'''
+			self._root.wm_attributes('-transparent', True)
+			
 		'''Add self to overlay collections.'''
 		overlays.append(self)
 
